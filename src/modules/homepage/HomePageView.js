@@ -40,7 +40,7 @@ function HomePageView() {
   const [isListening, setIsListening] = useState(false);
   const [permissionStatus, setPermissionStatus] = useState("");
   const [currentCommand, setCurrentCommand] = useState("");
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [recognitionStarted, setRecognitionStarted] = useState(false);
   const [isPermissionLoading, setIsPermissionIsLoading] = useState(false);
 
