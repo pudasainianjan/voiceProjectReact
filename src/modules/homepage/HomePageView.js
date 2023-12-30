@@ -98,7 +98,7 @@ function HomePageView() {
 
         recognition.lang = "en-US";
         // recognition.continuous = true;
-        recognition.interimResults = false;
+        recognition.interimResults = true;
         console.log("called rec");
         recognition.onresult = (event) => {
           console.log("event", event);
