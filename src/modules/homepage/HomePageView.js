@@ -40,7 +40,7 @@ function HomePageView() {
   const [isListening, setIsListening] = useState(false);
   const [permissionStatus, setPermissionStatus] = useState("");
   const [currentCommand, setCurrentCommand] = useState("");
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [recognitionStarted, setRecognitionStarted] = useState(false);
   const [isPermissionLoading, setIsPermissionIsLoading] = useState(false);
 
@@ -351,7 +351,13 @@ function HomePageView() {
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             {currentCommand && (
               <div className="text-center sm:mb-8 sm:flex sm:justify-center">
-                <div className="relative rounded-full px-5 py-1 text-4xl leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                <div
+                  className={`mb-7 sm:mb-0 relative rounded-full px-5 py-2 text-4xl leading-7 text-gray-600 ring-1 ${
+                    isDarkMode
+                      ? "ring-white hover:ring-white-900/20"
+                      : "ring-gray-900/10 hover:ring-gray-900/20"
+                  }`}
+                >
                   {currentCommand}
                 </div>
               </div>
