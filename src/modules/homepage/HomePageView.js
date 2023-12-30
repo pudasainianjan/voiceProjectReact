@@ -40,7 +40,7 @@ function HomePageView() {
   const [isListening, setIsListening] = useState(false);
   const [permissionStatus, setPermissionStatus] = useState("");
   const [currentCommand, setCurrentCommand] = useState("");
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [recognitionStarted, setRecognitionStarted] = useState(false);
   const [isPermissionLoading, setIsPermissionIsLoading] = useState(false);
 
@@ -184,6 +184,10 @@ function HomePageView() {
                 <span className="sr-only">Your Company</span>
                 <img className="h-8 w-auto" src={logo} alt="" />
               </a>
+
+              <span className="text-gray-500 font-bold flex items-center hover:text-gray-400">
+                Anjan Pudasaini
+              </span>
             </div>
             <div className="flex lg:hidden">
               <button
@@ -418,6 +422,9 @@ function HomePageView() {
             </div>
           </div>
         </div>
+        <p class="mt-30 sm:mt-0 w-full text-center text-xl leading-5 text-gray-500">
+          &copy; 2023 Anjan Pudasaini. All rights reserved.
+        </p>
       </div>
       <Alert
         headerText={permissionObj.headerText}
