@@ -10,6 +10,7 @@ export default function ToggleWithDescription({
   description,
   toggleEnabled,
   toggleSetEnabled,
+  isDarkMode,
 }) {
   const [enabled, setEnabled] = useState(toggleEnabled);
 
@@ -28,12 +29,19 @@ export default function ToggleWithDescription({
           aria-label="sound toggle switch"
           aria-description="Use this toggle switch to enable voice command mode"
           as="span"
-          className="text-sm font-medium leading-6 text-gray-900 lg:mx-5"
+          className={`text-sm font-medium leading-6 ${
+            isDarkMode ? "text-white opacity-70" : "text-gray-900"
+          }  lg:mx-5`}
           passive
         >
           {header}
         </Switch.Label>
-        <Switch.Description as="span" className="text-sm text-gray-500">
+        <Switch.Description
+          as="span"
+          className={`text-sm ${
+            isDarkMode ? "text-white opacity-70" : "text-gray-500"
+          } `}
+        >
           {description}
         </Switch.Description>
       </span>
