@@ -60,6 +60,7 @@ function HomePageView() {
           console.log("before calling recog");
           !recognitionStarted && startRecognitionProcess();
         } else {
+          setMobileMenuOpen(false);
           setSoundPermissionModalOpen(true);
         }
       });
@@ -133,6 +134,8 @@ function HomePageView() {
           setIsListening(false);
         };
 
+        // !enableSoundAssistance && recognition.stop();
+
         console.log("before calling recognition start");
 
         recognition.start();
@@ -145,6 +148,7 @@ function HomePageView() {
   function executeCommand(command) {
     setCurrentCommand(command);
     if (checkStrings(command, ["disable", "sound", "off"])) {
+      setMobileMenuOpen(true);
       setEnableSoundAssistance(false);
     } else if (checkStrings(command, ["enable", "sound", "on"])) {
       setEnableSoundAssistance(true);
@@ -332,11 +336,11 @@ function HomePageView() {
               />
             </div>
           )}
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            {currentCommand && (
-              <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div className="text-center mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            {"currentCommand" && (
+              <div className=" sm:mb-8 sm:flex sm:justify-center">
                 <div className="relative rounded-full px-5 py-1 text-4xl leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  {currentCommand}
+                  {"currentCommand"}
                 </div>
               </div>
             )}
