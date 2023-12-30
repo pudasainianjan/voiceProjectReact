@@ -97,7 +97,7 @@ function HomePageView() {
           window.webkitSpeechRecognition)();
 
         recognition.lang = "en-US";
-        // recognition.continuous = true;
+        recognition.continuous = true;
         recognition.interimResults = true;
         console.log("called rec");
         recognition.onresult = (event) => {
@@ -136,7 +136,7 @@ function HomePageView() {
 
         console.log("before calling recognition start");
 
-        recognition.start();
+        recognition && recognition.start();
       })
       .catch(() => {
         setIsPermissionIsLoading(false);
