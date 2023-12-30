@@ -97,7 +97,7 @@ function HomePageView() {
           window.webkitSpeechRecognition)();
 
         recognition.lang = "en-US";
-        recognition.continuous = true;
+        // recognition.continuous = true;
         recognition.interimResults = false;
         console.log("called rec");
         recognition.onresult = (event) => {
@@ -148,11 +148,15 @@ function HomePageView() {
     if (checkStrings(command, ["disable", "sound", "off"])) {
       setMobileMenuOpen(true);
       setEnableSoundAssistance(false);
+    } else if (checkStrings(command, ["menu", "close"])) {
+      setMobileMenuOpen(false);
+    } else if (checkStrings(command, ["menu", "open"])) {
+      setMobileMenuOpen(true);
     } else if (checkStrings(command, ["enable", "sound", "on"])) {
       setEnableSoundAssistance(true);
-    } else if (command.includes("dark mode")) {
+    } else if (checkStrings(command, ["dark", "mode"])) {
       setIsDarkMode(true);
-    } else if (command.includes("light mode")) {
+    } else if (checkStrings(command, ["light", "mode"])) {
       setIsDarkMode(false);
     }
   }
