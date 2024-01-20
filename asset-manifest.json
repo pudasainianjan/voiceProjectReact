@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/voiceProjectReact/static/css/main.1f8213c2.css",
-    "main.js": "/voiceProjectReact/static/js/main.629b3e7b.js",
+    "main.css": "/voiceProjectReact/static/css/main.a117d499.css",
+    "main.js": "/voiceProjectReact/static/js/main.d335a4bf.js",
     "static/js/787.ceb83154.chunk.js": "/voiceProjectReact/static/js/787.ceb83154.chunk.js",
     "static/media/logo.svg": "/voiceProjectReact/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/voiceProjectReact/index.html",
-    "main.1f8213c2.css.map": "/voiceProjectReact/static/css/main.1f8213c2.css.map",
-    "main.629b3e7b.js.map": "/voiceProjectReact/static/js/main.629b3e7b.js.map",
+    "main.a117d499.css.map": "/voiceProjectReact/static/css/main.a117d499.css.map",
+    "main.d335a4bf.js.map": "/voiceProjectReact/static/js/main.d335a4bf.js.map",
     "787.ceb83154.chunk.js.map": "/voiceProjectReact/static/js/787.ceb83154.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f8213c2.css",
-    "static/js/main.629b3e7b.js"
+    "static/css/main.a117d499.css",
+    "static/js/main.d335a4bf.js"
   ]
 }
